@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2 {
+    font-family: 'PlayFair Display';
+}
+
+p{
+    font-family:Arial;
+}
+
+
+/*              Encabezado y Navbar               */
+/*================================================*/
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid #66ab8a 5px;
+}
+
+.encabezado {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__Logo {
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    background-color: #444341;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    padding: 2px;
+    list-style-type: none;
+    transition: all 0.5;
+}
+
+.menu li:hover {
+    background: white;
+    color: #444341;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+.menu li a:hover {
+    background: white;
+    color: #444341;
+}
+
+
+/*                     Main Index                   */
+/*==================================================*/
+
+.conteiner {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(https://media.istockphoto.com/photos/business-and-lawyers-discussing-contract-papers-with-brass-scale-on-picture-id1331515250?b=1&k=20&m=1331515250&s=170667a&w=0&h=QFOrObssx5XRG6lIz0Wi_Qxh0lePUqa0OsE6IuV7vSU=);
+    background-size: cover;
+}
+
+
+.conteiner p {
+    font-size: 50px;
+    flex-wrap: wrap;
+    font-family: 'Anton', sans-serif;
+    -webkit-text-stroke: 2px black;
+    color: #66ab8a;
+    text-shadow: white 1px 2px;
+}
+
+
+/*                      Footer                       */
+/*===================================================*/
+
+footer {
+    flex-grow: 1;
+    background-color: #444341;
+    color: white;
+    padding: 5px;
+    border-top: solid #66ab8a 4px
+}
+
+.redesSociales ul {
+    display: flex;
+    list-style: none;
+    transition: all 0.5;
+}
+
+.redesSociales li {
+    margin: 2px;
+}
+
+.redesSociales li:hover {
+    background: white;
+    color: #444341;
+}
+
+.redesSociales li a {
+    text-decoration: none;
+    color: white;
+    font-size:20px;
+    margin-right: 5px;
+}
+
+.redesSociales li a:hover {
+    background: white;
+    color: #444341;
+}
+
+.derechos {
+    font-size: 10px;
+}
+
+/* MEDIA QUARIES */
+/* ==============*/
+
+@media (min-width: 768px) {
+    .menu li a {
+        font-size: 20px;
+    }
+
+    /*MAIN INDEX*/
+    .conteiner {
+        height: 83vh;
+    }
+
+    .conteiner p {
+        font-size: 50px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .redesSociales{
+        margin-right: 50px;
+    }
+    .derechos {
+        font-size: 16px;
+        margin-left: 50px;
+    }
+
+}
+
+
+@media (min-width: 1025px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .encabezado{
+        width: auto;
+        margin-left: 50px;
+    }
+
+    nav{
+        margin-right: 50px;
+    }
+
+    .menu {
+        width: 100%;
+        gap: 2px;
+        background-color: white;
+        color: #444341
+    }
+
+
+    .menu li a {
+        color: #444341;
+        font-size: 20px;
+        transition: all 0.8s;
+        margin-right: 5px;
+    }
+
+    .menu li a:hover {
+        color: #66ab8a;
+        font-size: 23px;
+    }
+
+    .conteiner {
+        height: 80vh;
+        background-image: url(https://images.hukumonline.com/frontend/lt60817afb8bde0/lt60817c4ceb9a0.jpg);
+        background-size: none;
+    }
+
+    footer {
+        background-color: white;
+        color: #444341;
+    }
+
+
+    .redesSociales li a {
+        color: #444341;
+        transition: all 0.8s;
+        margin-right: 5px;
+        font-size:23px;
+    }
+
+    .redesSociales li a:hover {
+        color: #66ab8a;
+        font-size: 25px;
+    }
+
+}
+
+
+/* ================================================================================================================*/
+/*                     Main El Estudio                   */
+/*=======================================================*/
+
+.mainEstudio{
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+.tituloEstudio{
+    font-size: 35px;
+}
+
+.descripcionEstudio{
+    text-align: justify;
+}
+
+.dra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    border: solid 3px #66ab8a;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.dra img{
+    width: 175px; 
+}
+
+.dra h3 {
+    text-align: center;
+}
+.dra p{
+    text-align: center;
+}
+
+/* MEDIA QUARIES */
+/* ==============*/
+
+@media (min-width: 768px) {
+   
+    .mainEstudio{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tarjetas{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dra{
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        color: #444341;
+        width: 70%;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .mainEstudio{
+        background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+        background-size: cover;
+        color: white;
+        height: 83vh;
+    }
+}
+
+
+/* ====================================================*/
+/*                     Main Contacto                   */
+/*=====================================================*/
+
+.contactanos{
+    margin:5px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(50px,auto));
+    grid-template-areas:
+    "titydesc"
+    "map"
+    "datosContacto"
+    "form"
+}
+
+.titydesc{
+    grid-area: titydesc;
+}
+
+.map {
+    grid-area:map;
+    overflow:hidden;
+    padding-bottom:250px;
+    margin-top:2px;
+    height:0;
+    position:relative;
+}
+.map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.datosContacto{
+    grid-area: datosContacto;
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.form{
+    grid-area: form;
+}
+
+.form fieldset{
+    display:flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 5px;
+}
+
+.form input[type="submit"]{
+    background-color: #66ab8a;
+    color: white;
+    transition: all 0.5;
+}
+
+.form input[type="submit"]:hover{
+    background-color: white;
+    color:#66ab8a;
+}
+
+/* MEDIA QUARIES */
+/* ==============*/
+
+@media (min-width: 768px) {
+.contactanos{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+    background-size: cover;
+    color: white;
+    display:grid;
+    grid-template-columns: 1fr 1 fr;
+    grid-template-rows: repeat(3, minmax(50px,auto));
+    grid-template-areas:
+    "titydesc titydesc"
+    "map map "
+    "datosContacto form";
+}
+
+.map{
+
+}
+
+}
+
+@media (min-width: 1025px) {
+.contactanos{
+    margin:0;
+    height: 75vh;
+    display:grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: repeat(3, minmax(50px,auto));
+    grid-template-areas:
+    "titydesc titydesc"
+    "map datosContacto"
+    "map form";
+    
+}
+
+.datosContacto ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.map{
+    padding-bottom: 350px;
+}
+.map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:90%;
+}
+
+.form{
+    background-color: white;
+}
+
+.form fieldset{
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0px;
+}
+}
