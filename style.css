@@ -12,6 +12,7 @@ body {
 
 h2 {
     font-family: 'PlayFair Display';
+    font-size: 35px;
 }
 
 p {
@@ -243,7 +244,7 @@ footer {
 }
 
 
-/* ================================================================================================================*/
+/* ======================================================*/
 /*                     Main El Estudio                   */
 /*=======================================================*/
 
@@ -398,18 +399,44 @@ footer {
 
 @media (min-width: 768px) {
     .contactanos {
-        padding-left: 50px;
-        padding-right: 50px;
+        height: 80vh;
+        padding: 50px;
         background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
         background-size: cover;
         color: white;
         display: grid;
-        grid-template-columns: 1fr 1 fr;
-        grid-template-rows: repeat(3, minmax(50px, auto));
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 1fr 30%;
         grid-template-areas:
             "titydesc titydesc"
             "map map "
             "datosContacto form";
+    }
+
+    .map {
+        grid-area: map;
+        overflow: hidden;
+        padding-bottom: 350px;
+        margin-top: 2px;
+        height: 0;
+        position: relative;
+    }
+    
+    .map iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    .datosContacto ul {
+        list-style-type: none;
+        font-size: 25px;
+    }
+
+    .datosContacto li {
+        margin-bottom: 20px;
     }
 
 }
