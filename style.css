@@ -400,7 +400,9 @@ footer {
 @media (min-width: 768px) {
     .contactanos {
         height: 80vh;
-        padding: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
         background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
         background-size: cover;
         color: white;
