@@ -444,26 +444,28 @@ footer {
 @media (min-width: 1025px) {
     .contactanos {
         margin: 0;
-        height: 75vh;
+        height: 80vh;
         display: grid;
         grid-template-columns: 60% 1fr;
-        grid-template-rows: repeat(2, minmax(50px auto));
+        grid-template-rows: 20% 30% 1fr;
         grid-template-areas:
             "titydesc titydesc"
-            "map form";
-
+            "map datosContacto"
+            "map form"
     }
 
 
     .datosContacto ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-around;
         list-style: none;
+        margin-bottom: 5px;
+        font-size:20px;
     }
 
     .map {
-        padding-bottom: 350px;
+        padding-bottom: 380px;
     }
 
     .map iframe {
