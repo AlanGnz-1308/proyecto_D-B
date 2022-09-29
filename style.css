@@ -14,8 +14,8 @@ h2 {
     font-family: 'PlayFair Display';
 }
 
-p{
-    font-family:Arial;
+p {
+    font-family: Arial;
 }
 
 
@@ -50,7 +50,8 @@ header {
 }
 
 .menu li {
-    padding: 2px;
+    width: 100%;
+    text-align: center;
     list-style-type: none;
     transition: all 0.5;
 }
@@ -58,6 +59,7 @@ header {
 .menu li:hover {
     background: white;
     color: #444341;
+    border: none;
 }
 
 .menu li a {
@@ -126,7 +128,7 @@ footer {
 .redesSociales li a {
     text-decoration: none;
     color: white;
-    font-size:20px;
+    font-size: 20px;
     margin-right: 5px;
 }
 
@@ -156,16 +158,17 @@ footer {
         font-size: 50px;
     }
 
-    footer{
+    footer {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
     }
 
-    .redesSociales{
+    .redesSociales {
         margin-right: 50px;
     }
+
     .derechos {
         font-size: 16px;
         margin-left: 50px;
@@ -181,28 +184,31 @@ footer {
         justify-content: space-between;
     }
 
-    .encabezado{
+    .encabezado {
         width: auto;
         margin-left: 50px;
     }
 
-    nav{
+    nav {
         margin-right: 50px;
     }
 
     .menu {
-        width: 100%;
-        gap: 2px;
+        gap: 5px;
         background-color: white;
-        color: #444341
+        color: #444341;
+        justify-content: space-between;
     }
 
+    .menu li {
+        width: auto;
+        margin-left: 8px;
+    }
 
     .menu li a {
         color: #444341;
         font-size: 20px;
         transition: all 0.8s;
-        margin-right: 5px;
     }
 
     .menu li a:hover {
@@ -226,7 +232,7 @@ footer {
         color: #444341;
         transition: all 0.8s;
         margin-right: 5px;
-        font-size:23px;
+        font-size: 23px;
     }
 
     .redesSociales li a:hover {
@@ -241,21 +247,21 @@ footer {
 /*                     Main El Estudio                   */
 /*=======================================================*/
 
-.mainEstudio{
-    display:flex;
+.mainEstudio {
+    display: flex;
     flex-direction: column;
-    padding:10px;
+    padding: 10px;
 }
 
-.tituloEstudio{
+.tituloEstudio {
     font-size: 35px;
 }
 
-.descripcionEstudio{
+.descripcionEstudio {
     text-align: justify;
 }
 
-.dra{
+.dra {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,14 +272,15 @@ footer {
     gap: 5px;
 }
 
-.dra img{
-    width: 175px; 
+.dra img {
+    width: 175px;
 }
 
 .dra h3 {
     text-align: center;
 }
-.dra p{
+
+.dra p {
     text-align: center;
 }
 
@@ -281,8 +288,8 @@ footer {
 /* ==============*/
 
 @media (min-width: 768px) {
-   
-    .mainEstudio{
+
+    .mainEstudio {
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 5px;
@@ -290,14 +297,14 @@ footer {
         justify-content: center;
     }
 
-    .tarjetas{
-        display:flex;
+    .tarjetas {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .dra{
+    .dra {
         display: flex;
         flex-direction: row;
         background-color: white;
@@ -308,7 +315,7 @@ footer {
 
 
 @media (min-width: 1025px) {
-    .mainEstudio{
+    .mainEstudio {
         background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
         background-size: cover;
         color: white;
@@ -321,40 +328,42 @@ footer {
 /*                     Main Contacto                   */
 /*=====================================================*/
 
-.contactanos{
-    margin:5px;
-    display:grid;
+.contactanos {
+    margin: 5px;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, minmax(50px,auto));
+    grid-template-rows: repeat(4, minmax(50px, auto));
     grid-template-areas:
-    "titydesc"
-    "map"
-    "datosContacto"
-    "form"
+        "titydesc"
+        "map"
+        "datosContacto"
+        "form"
 }
 
-.titydesc{
+.titydesc {
     grid-area: titydesc;
 }
 
 .map {
-    grid-area:map;
-    overflow:hidden;
-    padding-bottom:250px;
-    margin-top:2px;
-    height:0;
-    position:relative;
+    grid-area: map;
+    overflow: hidden;
+    padding-bottom: 250px;
+    margin-top: 2px;
+    height: 0;
+    position: relative;
 }
-.map iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+
+.map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
-.datosContacto{
+
+.datosContacto {
     grid-area: datosContacto;
-    display:flex;
+    display: flex;
     flex-direction: column;
     list-style: none;
     margin-top: 5px;
@@ -362,92 +371,86 @@ footer {
     font-size: 20px;
 }
 
-.form{
+.form {
     grid-area: form;
 }
 
-.form fieldset{
-    display:flex;
+.form fieldset {
+    display: flex;
     flex-direction: column;
     gap: 9px;
     padding: 5px;
 }
 
-.form input[type="submit"]{
+.form input[type="submit"] {
     background-color: #66ab8a;
     color: white;
     transition: all 0.5;
 }
 
-.form input[type="submit"]:hover{
+.form input[type="submit"]:hover {
     background-color: white;
-    color:#66ab8a;
+    color: #66ab8a;
 }
 
 /* MEDIA QUARIES */
 /* ==============*/
 
 @media (min-width: 768px) {
-.contactanos{
-    padding-left: 50px;
-    padding-right: 50px;
-    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
-    background-size: cover;
-    color: white;
-    display:grid;
-    grid-template-columns: 1fr 1 fr;
-    grid-template-rows: repeat(3, minmax(50px,auto));
-    grid-template-areas:
-    "titydesc titydesc"
-    "map map "
-    "datosContacto form";
-}
-
-.map{
-
-}
+    .contactanos {
+        padding-left: 50px;
+        padding-right: 50px;
+        background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+        background-size: cover;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1 fr;
+        grid-template-rows: repeat(3, minmax(50px, auto));
+        grid-template-areas:
+            "titydesc titydesc"
+            "map map "
+            "datosContacto form";
+    }
 
 }
 
 @media (min-width: 1025px) {
-.contactanos{
-    margin:0;
-    height: 75vh;
-    display:grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows: repeat(3, minmax(50px,auto));
-    grid-template-areas:
-    "titydesc titydesc"
-    "map datosContacto"
-    "map form";
-    
-}
+    .contactanos {
+        margin: 0;
+        height: 75vh;
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: repeat(2, minmax(50px auto));
+        grid-template-areas:
+            "titydesc titydesc"
+            "map form";
 
-.datosContacto ul {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-}
+    }
 
-.map{
-    padding-bottom: 350px;
-}
-.map iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:90%;
-}
 
-.form{
-    background-color: white;
-}
+    .datosContacto ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+    }
 
-.form fieldset{
-    display:flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 0px;
-}
+    .map {
+        padding-bottom: 350px;
+    }
+
+    .map iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 90%;
+    }
+
+    .form fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0px;
+        background-color: white;
+    }
 }
