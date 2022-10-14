@@ -28,52 +28,54 @@ header {
     display: flex;
     flex-direction: column;
     border-bottom: solid #66ab8a 5px;
-}
 
-.encabezado {
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-}
 
-.header__Logo {
-    height: 80px;
-}
+    .encabezado {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
 
-.menu {
-    display: flex;
-    width: 100%;
-    background-color: #444341;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.menu li {
-    width: 100%;
-    text-align: center;
-    list-style-type: none;
-    transition: all 0.5;
-}
+        .header__Logo {
+            height: 80px;
+        }
+    }
 
-.menu li:hover {
-    background: white;
-    color: #444341;
-    border: none;
-}
+    .menu {
+        display: flex;
+        width: 100%;
+        background-color: #444341;
+        justify-content: space-around;
+        align-items: center;
 
-.menu li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: white;
-}
 
-.menu li a:hover {
-    background: white;
-    color: #444341;
-}
+        li {
+            width: 100%;
+            text-align: center;
+            list-style-type: none;
+            transition: all 0.5;
+        }
 
+        li:hover {
+            background: white;
+            color: #444341;
+            border: none;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+        }
+
+        li a:hover {
+            background: white;
+            color: #444341;
+        }
+    }
+}
 
 /*                     Main Index                   */
 /*==================================================*/
@@ -87,18 +89,16 @@ header {
     text-align: center;
     background-image: url(https://media.istockphoto.com/photos/business-and-lawyers-discussing-contract-papers-with-brass-scale-on-picture-id1331515250?b=1&k=20&m=1331515250&s=170667a&w=0&h=QFOrObssx5XRG6lIz0Wi_Qxh0lePUqa0OsE6IuV7vSU=);
     background-size: cover;
+
+    p {
+        font-size: 50px;
+        flex-wrap: wrap;
+        font-family: 'Anton', sans-serif;
+        -webkit-text-stroke: 2px black;
+        color: #66ab8a;
+        text-shadow: white 1px 2px;
+    }
 }
-
-
-.conteiner p {
-    font-size: 50px;
-    flex-wrap: wrap;
-    font-family: 'Anton', sans-serif;
-    -webkit-text-stroke: 2px black;
-    color: #66ab8a;
-    text-shadow: white 1px 2px;
-}
-
 
 /*                      Footer                       */
 /*===================================================*/
@@ -108,38 +108,42 @@ footer {
     background-color: #444341;
     color: white;
     padding: 5px;
-    border-top: solid #66ab8a 4px
-}
+    border-top: solid #66ab8a 4px;
 
-.redesSociales ul {
-    display: flex;
-    list-style: none;
-    transition: all 0.5;
-}
+    .redesSociales {
 
-.redesSociales li {
-    margin: 2px;
-}
+        ul {
+            display: flex;
+            list-style: none;
+            transition: all 0.5;
+        }
 
-.redesSociales li:hover {
-    background: white;
-    color: #444341;
-}
+        li {
+            margin: 2px;
+        }
 
-.redesSociales li a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    margin-right: 5px;
-}
+        li:hover {
+            background: white;
+            color: #444341;
+        }
 
-.redesSociales li a:hover {
-    background: white;
-    color: #444341;
-}
+        li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin-right: 5px;
+        }
 
-.derechos {
-    font-size: 10px;
+        li a:hover {
+            background: white;
+            color: #444341;
+        }
+
+    }
+
+    .derechos {
+        font-size: 10px;
+    }
 }
 
 /* MEDIA QUARIES */
@@ -153,10 +157,10 @@ footer {
     /*MAIN INDEX*/
     .conteiner {
         height: 83vh;
-    }
 
-    .conteiner p {
-        font-size: 50px;
+        p {
+            font-size: 50px;
+        }
     }
 
     footer {
@@ -164,17 +168,16 @@ footer {
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-    }
 
-    .redesSociales {
-        margin-right: 50px;
-    }
+        .redesSociales {
+            margin-right: 50px;
+        }
 
-    .derechos {
-        font-size: 16px;
-        margin-left: 50px;
+        .derechos {
+            font-size: 16px;
+            margin-left: 50px;
+        }
     }
-
 }
 
 
@@ -183,38 +186,38 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-    }
 
-    .encabezado {
-        width: auto;
-        margin-left: 50px;
-    }
+        .encabezado {
+            width: auto;
+            margin-left: 50px;
+        }
 
-    nav {
-        margin-right: 50px;
-    }
+        nav {
+            margin-right: 50px;
 
-    .menu {
-        gap: 5px;
-        background-color: white;
-        color: #444341;
-        justify-content: space-between;
-    }
+            .menu {
+                gap: 5px;
+                background-color: white;
+                color: #444341;
+                justify-content: space-between;
 
-    .menu li {
-        width: auto;
-        margin-left: 8px;
-    }
+                li {
+                    width: auto;
+                    margin-left: 8px;
+                }
 
-    .menu li a {
-        color: #444341;
-        font-size: 20px;
-        transition: all 0.8s;
-    }
+                li a {
+                    color: #444341;
+                    font-size: 20px;
+                    transition: all 0.8s;
+                }
 
-    .menu li a:hover {
-        color: #66ab8a;
-        font-size: 23px;
+                li a:hover {
+                    color: #66ab8a;
+                    font-size: 23px;
+                }
+            }
+        }
     }
 
     .conteiner {
@@ -226,21 +229,21 @@ footer {
     footer {
         background-color: white;
         color: #444341;
+
+        .redesSociales {
+            li a {
+                color: #444341;
+                transition: all 0.8s;
+                margin-right: 5px;
+                font-size: 23px;
+            }
+
+            li a:hover {
+                color: #66ab8a;
+                font-size: 25px;
+            }
+        }
     }
-
-
-    .redesSociales li a {
-        color: #444341;
-        transition: all 0.8s;
-        margin-right: 5px;
-        font-size: 23px;
-    }
-
-    .redesSociales li a:hover {
-        color: #66ab8a;
-        font-size: 25px;
-    }
-
 }
 
 
@@ -423,7 +426,7 @@ footer {
         height: 0;
         position: relative;
     }
-    
+
     .map iframe {
         left: 0;
         top: 0;
@@ -463,7 +466,7 @@ footer {
         justify-content: space-around;
         list-style: none;
         margin-bottom: 5px;
-        font-size:20px;
+        font-size: 20px;
     }
 
     .map {
@@ -491,35 +494,39 @@ footer {
 /*                     ANIMATION                   */
 /*=====================================================*/
 .dra p {
-	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
+
 /**
  * ----------------------------------------
  * animation slide-in-right
  * ----------------------------------------
  */
- @-webkit-keyframes slide-in-right {
+@-webkit-keyframes slide-in-right {
     0% {
-      -webkit-transform: translateX(1000px);
-              transform: translateX(1000px);
-      opacity: 0;
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
     }
+
     100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  @keyframes slide-in-right {
+}
+
+@keyframes slide-in-right {
     0% {
-      -webkit-transform: translateX(1000px);
-              transform: translateX(1000px);
-      opacity: 0;
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
     }
+
     100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
+}
