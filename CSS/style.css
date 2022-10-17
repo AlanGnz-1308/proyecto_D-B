@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ header {
   border-bottom: solid #66ab8a 5px;
 }
 
-.encabezado {
+header .encabezado {
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
@@ -36,11 +37,11 @@ header {
   justify-content: center;
 }
 
-.header__Logo {
+header .encabezado .header__Logo {
   height: 80px;
 }
 
-.menu {
+header .menu {
   display: flex;
   width: 100%;
   background-color: #444341;
@@ -48,26 +49,26 @@ header {
   align-items: center;
 }
 
-.menu li {
+header .menu li {
   width: 100%;
   text-align: center;
   list-style-type: none;
   transition: all 0.5;
 }
 
-.menu li:hover {
+header .menu li:hover {
   background: white;
   color: #444341;
   border: none;
 }
 
-.menu li a {
+header .menu li a {
   text-decoration: none;
   font-size: 16px;
   color: white;
 }
 
-.menu li a:hover {
+header .menu li a:hover {
   background: white;
   color: #444341;
 }
@@ -104,34 +105,34 @@ footer {
   border-top: solid #66ab8a 4px;
 }
 
-.redesSociales ul {
+footer .redesSociales ul {
   display: flex;
   list-style: none;
   transition: all 0.5;
 }
 
-.redesSociales li {
+footer .redesSociales ul li {
   margin: 2px;
 }
 
-.redesSociales li:hover {
+footer .redesSociales ul li:hover {
   background: white;
   color: #444341;
 }
 
-.redesSociales li a {
+footer .redesSociales ul li a {
   text-decoration: none;
   color: white;
   font-size: 20px;
   margin-right: 5px;
 }
 
-.redesSociales li a:hover {
+footer .redesSociales ul li a:hover {
   background: white;
   color: #444341;
 }
 
-.derechos {
+footer .derechos {
   font-size: 10px;
 }
 
@@ -154,10 +155,10 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
-  .redesSociales {
+  footer .redesSociales {
     margin-right: 50px;
   }
-  .derechos {
+  footer .derechos {
     font-size: 16px;
     margin-left: 50px;
   }
@@ -169,29 +170,29 @@ footer {
     align-items: center;
     justify-content: space-between;
   }
-  .encabezado {
+  header .encabezado {
     width: auto;
     margin-left: 50px;
   }
-  nav {
+  header nav {
     margin-right: 50px;
   }
-  .menu {
+  header nav .menu {
     gap: 5px;
     background-color: white;
     color: #444341;
     justify-content: space-between;
   }
-  .menu li {
+  header nav .menu li {
     width: auto;
     margin-left: 8px;
   }
-  .menu li a {
+  header nav .menu li a {
     color: #444341;
     font-size: 20px;
     transition: all 0.8s;
   }
-  .menu li a:hover {
+  header nav .menu li a:hover {
     color: #66ab8a;
     font-size: 23px;
   }
@@ -204,15 +205,62 @@ footer {
     background-color: white;
     color: #444341;
   }
-  .redesSociales li a {
+  footer .redesSociales li a {
     color: #444341;
     transition: all 0.8s;
     margin-right: 5px;
     font-size: 23px;
   }
-  .redesSociales li a:hover {
+  footer .redesSociales li a:hover {
     color: #66ab8a;
     font-size: 25px;
+  }
+}
+
+/* ======================================================*/
+/*                     Animación Index                   */
+/*=======================================================*/
+.tracking-in-contract-bck {
+  -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
+}
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
   }
 }
 
@@ -225,15 +273,15 @@ footer {
   padding: 10px;
 }
 
-.tituloEstudio {
+.mainEstudio .tituloEstudio {
   font-size: 35px;
 }
 
-.descripcionEstudio {
+.mainEstudio .descripcionEstudio {
   text-align: justify;
 }
 
-.dra {
+.mainEstudio .dra {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,15 +292,15 @@ footer {
   gap: 5px;
 }
 
-.dra img {
+.mainEstudio .dra img {
   width: 175px;
 }
 
-.dra h3 {
+.mainEstudio .dra h3 {
   text-align: center;
 }
 
-.dra p {
+.mainEstudio .dra p {
   text-align: center;
 }
 
@@ -266,13 +314,13 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  .tarjetas {
+  .mainEstudio .tarjetas {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .dra {
+  .mainEstudio .tarjetas .dra {
     display: flex;
     flex-direction: row;
     background-color: white;
@@ -290,148 +338,9 @@ footer {
   }
 }
 
-/* ====================================================*/
-/*                     Main Contacto                   */
-/*=====================================================*/
-.contactanos {
-  margin: 5px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, minmax(50px, auto));
-  grid-template-areas: "titydesc" "map" "datosContacto" "form";
-}
-
-.titydesc {
-  grid-area: titydesc;
-}
-
-.map {
-  grid-area: map;
-  overflow: hidden;
-  padding-bottom: 250px;
-  margin-top: 2px;
-  height: 0;
-  position: relative;
-}
-
-.map iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-.datosContacto {
-  grid-area: datosContacto;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.form {
-  grid-area: form;
-}
-
-.form fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  padding: 5px;
-}
-
-.form input[type="submit"] {
-  background-color: #66ab8a;
-  color: white;
-  transition: all 0.5;
-}
-
-.form input[type="submit"]:hover {
-  background-color: white;
-  color: #66ab8a;
-}
-
-/* MEDIA QUARIES */
-/* ==============*/
-@media (min-width: 768px) {
-  .contactanos {
-    height: 80vh;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
-    background-size: cover;
-    color: white;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 1fr 30%;
-    grid-template-areas: "titydesc titydesc" "map map " "datosContacto form";
-  }
-  .map {
-    grid-area: map;
-    overflow: hidden;
-    padding-bottom: 350px;
-    margin-top: 2px;
-    height: 0;
-    position: relative;
-  }
-  .map iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-  .datosContacto ul {
-    list-style-type: none;
-    font-size: 25px;
-  }
-  .datosContacto li {
-    margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 1025px) {
-  .contactanos {
-    margin: 0;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows: 20% 30% 1fr;
-    grid-template-areas: "titydesc titydesc" "map datosContacto" "map form";
-  }
-  .datosContacto ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style: none;
-    margin-bottom: 5px;
-    font-size: 20px;
-  }
-  .map {
-    padding-bottom: 380px;
-  }
-  .map iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 90%;
-  }
-  .form fieldset {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 0px;
-    background-color: white;
-  }
-}
-
-/* ====================================================*/
-/*                     ANIMATION                   */
-/*=====================================================*/
+/* ==========================================================*/
+/*                     Animación El Estudio                  */
+/*===========================================================*/
 .dra p {
   -webkit-animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
@@ -467,3 +376,267 @@ footer {
     opacity: 1;
   }
 }
+
+/* ====================================================*/
+/*                     Main Contacto                   */
+/*=====================================================*/
+.contactanos {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(50px, auto));
+  grid-template-areas: "titydesc" "map" "datosContacto" "form";
+}
+
+.contactanos .titydesc {
+  grid-area: titydesc;
+}
+
+.contactanos .map {
+  grid-area: map;
+  overflow: hidden;
+  padding-bottom: 250px;
+  margin-top: 2px;
+  height: 0;
+  position: relative;
+}
+
+.contactanos .map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.contactanos .datosContacto {
+  grid-area: datosContacto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.contactanos .form {
+  grid-area: form;
+}
+
+.contactanos .form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 5px;
+}
+
+.contactanos .form input[type="submit"] {
+  background-color: #66ab8a;
+  color: white;
+  transition: all 0.5;
+}
+
+.contactanos .form input[type="submit"]:hover {
+  background-color: white;
+  color: #66ab8a;
+}
+
+/* MEDIA QUARIES */
+/* ==============*/
+@media (min-width: 768px) {
+  .contactanos {
+    height: 80vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+    background-size: cover;
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 1fr 30%;
+    grid-template-areas: "titydesc titydesc" "map map " "datosContacto form";
+  }
+  .contactanos .map {
+    grid-area: map;
+    overflow: hidden;
+    padding-bottom: 350px;
+    margin-top: 2px;
+    height: 0;
+    position: relative;
+  }
+  .contactanos .map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .contactanos .datos contacto ul {
+    list-style-type: none;
+    font-size: 25px;
+  }
+  .contactanos .datos contacto ul li {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contactanos {
+    margin: 0;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: 20% 30% 1fr;
+    grid-template-areas: "titydesc titydesc" "map datosContacto" "map form";
+  }
+  .contactanos .datosContacto ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  .contactanos .map {
+    padding-bottom: 380px;
+  }
+  .contactanos .map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 90%;
+  }
+  .contactanos .form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0px;
+    background-color: white;
+  }
+}
+
+/* ====================================================*/
+/*                     Main Servicios                  */
+/*=====================================================*/
+.mainServicios {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.mainServicios .titServicios h3 {
+  font-size: 35px;
+}
+
+.mainServicios .titServicios p {
+  font-size: 16px;
+}
+
+.mainServicios .asesoria {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.mainServicios .tarjetasServicios {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mainServicios .tarjetasServicios .tarjetaDescripcionServ {
+  margin-top: 10px;
+  width: 100%;
+  height: 25vh;
+  padding: 5px;
+  border: solid 3px #444341;
+  border-radius: 10px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #66ab8a;
+  color: white;
+}
+
+.mainServicios .tarjetasServicios .tarjetaDescripcionServ h4 {
+  font-size: 20px;
+}
+
+.mainServicios .tarjetasServicios .tarjetaDescripcionServ p {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ====================================================*/
+/*                 Animación Servicios                  */
+/*=====================================================*/
+.jello-horizontal {
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* MEDIA QUARIES */
+/* ==============*/
