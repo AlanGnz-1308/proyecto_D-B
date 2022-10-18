@@ -353,14 +353,14 @@ footer {
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 5px;
-        align-items: center;
-        justify-content: center;
+        height: 83vh;
+
 
         .tarjetas {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
 
             .dra {
                 display: flex;
@@ -502,9 +502,6 @@ footer {
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 20px;
-        background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
-        background-size: cover;
-        color: white;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 1fr 30%;
@@ -547,6 +544,9 @@ footer {
     .contactanos {
         margin: 0;
         height: 80vh;
+        background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+        background-size: cover;
+        color: white;
         display: grid;
         grid-template-columns: 60% 1fr;
         grid-template-rows: 20% 30% 1fr;
@@ -590,7 +590,7 @@ footer {
 /*=====================================================*/
 
 .mainServicios {
-    margin:5px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
 
@@ -727,7 +727,7 @@ footer {
 
 @media (min-width: 768px) {
 
-    .mainServicios{
+    .mainServicios {
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 20px;
@@ -739,8 +739,8 @@ footer {
         grid-template-columns: 50% 50%;
         grid-template-rows: 30% 30% 30%;
         grid-gap: 15px;
-        grid-template-areas:"familia comercial
-            laboral corporativo
+        grid-template-areas: "familia comercial
+ laboral corporativo
             previsional salud"
 ;
     }
@@ -785,29 +785,103 @@ footer {
     }
 }
 
+@media (min-width: 1025px) {
+
+    .mainServicios {
+        background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+        background-size: cover;
+        color: white;
+    }
+}
 
 /* ====================================================*/
 /*                     Main Aranceles                  */
 /*=====================================================*/
 .mainAranceles {
-    margin:5px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
+    height: 75vh;
 
-    .tituloAranceles{
-        font-size:35px;
+    .tituloAranceles {
+        font-size: 35px;
     }
 
-    p{
+    p {
         margin-top: 10px;
         font-size: 16px;
     }
 
-    .tablaAranceles{
-        margin-top:10px;
+    .tablaAranceles {
+        margin-top: 10px;
         border-collapse: collapse;
         margin: 25px;
         font-size: 20px;
+        text-align: left;
+        border-radius: 3px 3px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        th {
+            background-color: #66ab8a;
+            color: white;
+            padding-left: 2px;
+        }
+
+        td {
+            border-bottom: 1px solid #dddddd;
+            padding-left: 2px;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        tr:last-of-type {
+            border-bottom: 2px solid #66ab8a;
+        }
     }
 }
 
+/* MEDIA QUARIES */
+/* ==============*/
+
+@media (min-width: 768px) {
+
+    .mainAranceles {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        height: 83vh;
+
+
+        .tablaAranceles {
+            justify-content: center;
+            align-items: center;
+
+            th {
+                padding: 12px 15px;
+            }
+
+            td {
+                padding: 12px 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .mainAranceles {
+        background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+        background-size: cover;
+        color: white;
+
+        .tablaAranceles {
+            color: black;
+
+            tr:nth-of-type(odd) {
+                background-color: white;
+            }
+        }
+    }
+}

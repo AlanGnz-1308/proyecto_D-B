@@ -311,14 +311,13 @@ footer .derechos {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 5px;
-    align-items: center;
-    justify-content: center;
+    height: 83vh;
   }
   .mainEstudio .tarjetas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   .mainEstudio .tarjetas .dra {
     display: flex;
@@ -449,9 +448,6 @@ footer .derechos {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
-    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
-    background-size: cover;
-    color: white;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 15% 1fr 30%;
@@ -485,6 +481,9 @@ footer .derechos {
   .contactanos {
     margin: 0;
     height: 80vh;
+    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+    background-size: cover;
+    color: white;
     display: grid;
     grid-template-columns: 60% 1fr;
     grid-template-rows: 20% 30% 1fr;
@@ -685,6 +684,14 @@ footer .derechos {
   }
 }
 
+@media (min-width: 1025px) {
+  .mainServicios {
+    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+    background-size: cover;
+    color: white;
+  }
+}
+
 /* ====================================================*/
 /*                     Main Aranceles                  */
 /*=====================================================*/
@@ -692,6 +699,7 @@ footer .derechos {
   margin: 5px;
   display: flex;
   flex-direction: column;
+  height: 75vh;
 }
 
 .mainAranceles .tituloAranceles {
@@ -708,4 +716,62 @@ footer .derechos {
   border-collapse: collapse;
   margin: 25px;
   font-size: 20px;
+  text-align: left;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.mainAranceles .tablaAranceles th {
+  background-color: #66ab8a;
+  color: white;
+  padding-left: 2px;
+}
+
+.mainAranceles .tablaAranceles td {
+  border-bottom: 1px solid #dddddd;
+  padding-left: 2px;
+}
+
+.mainAranceles .tablaAranceles tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.mainAranceles .tablaAranceles tr:last-of-type {
+  border-bottom: 2px solid #66ab8a;
+}
+
+/* MEDIA QUARIES */
+/* ==============*/
+@media (min-width: 768px) {
+  .mainAranceles {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    height: 83vh;
+  }
+  .mainAranceles .tablaAranceles {
+    justify-content: center;
+    align-items: center;
+  }
+  .mainAranceles .tablaAranceles th {
+    padding: 12px 15px;
+  }
+  .mainAranceles .tablaAranceles td {
+    padding: 12px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainAranceles {
+    background-image: url(https://thumbs.dreamstime.com/b/icono-de-la-balanza-justicia-en-un-interfaz-futurista-109093701.jpg);
+    background-size: cover;
+    color: white;
+  }
+  .mainAranceles .tablaAranceles {
+    color: black;
+  }
+  .mainAranceles .tablaAranceles tr:nth-of-type(odd) {
+    background-color: white;
+  }
 }
