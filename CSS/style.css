@@ -523,7 +523,6 @@ footer .derechos {
   margin: 5px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 
 .mainServicios .titServicios h3 {
@@ -693,4 +692,20 @@ footer .derechos {
   margin: 5px;
   display: flex;
   flex-direction: column;
+}
+
+.mainAranceles .tituloAranceles {
+  font-size: 35px;
+}
+
+.mainAranceles p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.mainAranceles .tablaAranceles {
+  margin-top: 10px;
+  border-collapse: collapse;
+  margin: 25px;
+  font-size: 20px;
 }
