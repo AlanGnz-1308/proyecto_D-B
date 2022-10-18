@@ -19,6 +19,7 @@ p {
     font-family: Arial;
 }
 
+@import 'variables';
 
 /*              Encabezado y Navbar               */
 /*================================================*/
@@ -27,7 +28,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    border-bottom: solid #66ab8a 5px;
+    border-bottom: solid $verdeDB 5px;
 
 
     .encabezado {
@@ -46,7 +47,7 @@ header {
     .menu {
         display: flex;
         width: 100%;
-        background-color: #444341;
+        background-color: $grisDB;
         justify-content: space-around;
         align-items: center;
 
@@ -60,7 +61,7 @@ header {
 
         li:hover {
             background: white;
-            color: #444341;
+            color: $grisDB;
             border: none;
         }
 
@@ -72,7 +73,7 @@ header {
 
         li a:hover {
             background: white;
-            color: #444341;
+            color: $grisDB;
         }
     }
 }
@@ -95,7 +96,7 @@ header {
         flex-wrap: wrap;
         font-family: 'Anton', sans-serif;
         -webkit-text-stroke: 2px black;
-        color: #66ab8a;
+        color: $verdeDB;
         text-shadow: white 1px 2px;
     }
 }
@@ -105,10 +106,10 @@ header {
 
 footer {
     flex-grow: 1;
-    background-color: #444341;
+    background-color: $grisDB;
     color: white;
     padding: 5px;
-    border-top: solid #66ab8a 4px;
+    border-top: solid $verdeDB 4px;
 
     .redesSociales {
 
@@ -124,7 +125,7 @@ footer {
 
             li:hover {
                 background: white;
-                color: #444341;
+                color: $grisDB;
             }
 
             li a {
@@ -136,7 +137,7 @@ footer {
 
             li a:hover {
                 background: white;
-                color: #444341;
+                color: $grisDB;
             }
         }
     }
@@ -198,7 +199,7 @@ footer {
             .menu {
                 gap: 5px;
                 background-color: white;
-                color: #444341;
+                color: $grisDB;
                 justify-content: space-between;
 
                 li {
@@ -207,13 +208,13 @@ footer {
                 }
 
                 li a {
-                    color: #444341;
+                    color: $grisDB;
                     font-size: 20px;
                     transition: all 0.8s;
                 }
 
                 li a:hover {
-                    color: #66ab8a;
+                    color: $verdeDB;
                     font-size: 23px;
                 }
             }
@@ -228,24 +229,23 @@ footer {
 
     footer {
         background-color: white;
-        color: #444341;
+        color: $grisDB;
 
         .redesSociales {
-            li a {
-                color: #444341;
-                transition: all 0.8s;
+            li a i{
+                color: $grisDB;
                 margin-right: 5px;
                 font-size: 23px;
+                transition: all 0.8s;
             }
 
-            li a:hover {
-                color: #66ab8a;
+            li a i:hover {
+                color: $verdeDB;
                 font-size: 25px;
             }
         }
     }
 }
-
 
 /* ======================================================*/
 /*                     Animación Index                   */
@@ -253,8 +253,8 @@ footer {
 
 
 .tracking-in-contract-bck {
-    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
-    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
 }
 
 
@@ -326,7 +326,7 @@ footer {
         align-items: center;
         margin: 10px;
         padding: 5px;
-        border: solid 3px #66ab8a;
+        border: solid 3px $verdeDB;
         border-radius: 10px;
         gap: 5px;
 
@@ -366,7 +366,7 @@ footer {
                 display: flex;
                 flex-direction: row;
                 background-color: white;
-                color: #444341;
+                color: $grisDB;
                 width: 70%;
             }
         }
@@ -481,14 +481,14 @@ footer {
         }
 
         input[type="submit"] {
-            background-color: #66ab8a;
+            background-color: $verdeDB;
             color: white;
             transition: all 0.5;
         }
 
         input[type="submit"]:hover {
             background-color: white;
-            color: #66ab8a;
+            color: $verdeDB;
         }
     }
 }
@@ -618,14 +618,14 @@ footer {
             width: 100%;
             height: 25vh;
             padding: 5px;
-            border: solid 3px #444341;
+            border: solid 3px $grisDB;
             border-radius: 10px;
             gap: 5px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #66ab8a;
+            background-color: $verdeDB;
             color: white;
 
             h4 {
@@ -823,7 +823,7 @@ footer {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
         th {
-            background-color: #66ab8a;
+            background-color: $verdeDB;
             color: white;
             padding-left: 2px;
         }
@@ -838,7 +838,7 @@ footer {
         }
 
         tr:last-of-type {
-            border-bottom: 2px solid #66ab8a;
+            border-bottom: 2px solid $verdeDB;
         }
     }
 }
