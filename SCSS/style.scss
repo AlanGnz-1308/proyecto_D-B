@@ -93,7 +93,7 @@ header {
 /*                     Main Index                   */
 /*==================================================*/
 
-.conteiner {
+.fraseIndex {
     width: 100%;
     height: 75vh;
     display: flex;
@@ -117,7 +117,7 @@ header {
 /*===================================================*/
 
 footer {
-    flex-grow: 1;
+    margin-top:auto;
     background-color: $grisDB;
     color: white;
     padding: 5px;
@@ -168,7 +168,7 @@ footer {
     }
 
     /*MAIN INDEX*/
-    .conteiner {
+    .fraseIndex {
         height: 83vh;
 
         p {
@@ -229,11 +229,16 @@ footer {
                     color: $verdeDB;
                     font-size: 23px;
                 }
+        
+                .refActive{
+                    color: $verdeDB;
+                    font-size: 23px;
+                }
             }
         }
     }
 
-    .conteiner {
+    .fraseIndex {
         height: 80vh;
         background-image: url(https://images.hukumonline.com/frontend/lt60817afb8bde0/lt60817c4ceb9a0.jpg);
         background-size: none;
