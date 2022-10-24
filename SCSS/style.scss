@@ -51,12 +51,14 @@ header {
         justify-content: space-around;
         align-items: center;
 
-
         li {
             width: 100%;
             text-align: center;
             list-style-type: none;
             transition: all 0.5;
+
+            
+
         }
 
         li:hover {
@@ -71,8 +73,18 @@ header {
             color: white;
         }
 
+        
+
         li a:hover {
             background: white;
+            color: $grisDB;
+        }
+
+        .navActive{
+            background: white;
+        }
+
+        .refActive{
             color: $grisDB;
         }
     }

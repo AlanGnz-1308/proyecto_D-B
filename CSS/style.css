@@ -73,6 +73,14 @@ header .menu li a:hover {
   color: #444341;
 }
 
+header .menu .navActive {
+  background: white;
+}
+
+header .menu .refActive {
+  color: #444341;
+}
+
 /*                     Main Index                   */
 /*==================================================*/
 .conteiner {
