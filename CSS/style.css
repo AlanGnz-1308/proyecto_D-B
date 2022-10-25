@@ -83,16 +83,18 @@ header .menu .refActive {
 
 /*                     Main Index                   */
 /*==================================================*/
-.fraseIndex {
-  width: 100%;
-  height: 100%;
+.mainIndex {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 80vh;
   background-image: url(https://media.istockphoto.com/photos/business-and-lawyers-discussing-contract-papers-with-brass-scale-on-picture-id1331515250?b=1&k=20&m=1331515250&s=170667a&w=0&h=QFOrObssx5XRG6lIz0Wi_Qxh0lePUqa0OsE6IuV7vSU=);
   background-size: cover;
+}
+
+.fraseIndex {
+  width: 100%;
 }
 
 .fraseIndex p {
@@ -110,7 +112,7 @@ footer {
   margin-top: auto;
   background-color: #444341;
   color: white;
-  padding: 5px;
+  padding: 10px;
   border-top: solid #66ab8a 4px;
 }
 
@@ -152,9 +154,6 @@ footer .derechos {
     font-size: 20px;
   }
   /*MAIN INDEX*/
-  .fraseIndex {
-    height: 83vh;
-  }
   .fraseIndex p {
     font-size: 50px;
   }
@@ -209,8 +208,7 @@ footer .derechos {
     color: #66ab8a;
     font-size: 23px;
   }
-  .fraseIndex {
-    height: 80vh;
+  .mainIndex {
     background-image: url(https://images.hukumonline.com/frontend/lt60817afb8bde0/lt60817c4ceb9a0.jpg);
     background-size: none;
   }
@@ -704,7 +702,6 @@ footer .derechos {
   padding: 5px;
   display: flex;
   flex-direction: column;
-  height: 75vh;
 }
 
 .mainAranceles .tituloAranceles {
@@ -753,7 +750,7 @@ footer .derechos {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 20px;
-    height: 83vh;
+    height: 80vh;
   }
   .mainAranceles .tablaAranceles {
     justify-content: center;
