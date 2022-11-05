@@ -708,6 +708,69 @@ footer {
     }
 }
 
+
+/* MEDIA QUARIES */
+/* ==============*/
+
+@media (min-width: 768px) {
+
+    .mainServicios {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+    }
+
+    .tarjetasServicios {
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30% 30% 30%;
+        grid-gap: 15px;
+        grid-template-areas: "familia comercial
+ laboral corporativo
+            previsional salud"
+;
+    }
+
+    .tarjetasServicios:nth-child(1) {
+        grid-area: familia;
+    }
+
+    .tarjetasServicios:nth-child(2) {
+        grid-area: comercial;
+    }
+
+    .tarjetasServicios:nth-child(3) {
+        grid-area: laboral;
+    }
+
+    .tarjetasServicios:nth-child(4) {
+        grid-area: corporativo;
+    }
+
+    .tarjetasServicios:nth-child(5) {
+        grid-area: previsional;
+    }
+
+    .tarjetasServicios:nth-child(6) {
+        grid-area: salud;
+    }
+
+    .tarjetaDescripcionServ {
+        margin-top: 10px;
+        width: 100%;
+        height: 10vh;
+
+        h4 {
+            font-size: 30px;
+            font-weight: 100;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+    
 /* ====================================================*/
 /*                 Animación Servicios                  */
 /*=====================================================*/
@@ -789,68 +852,6 @@ footer {
         transform: scale3d(1, 1, 1);
     }
 }
-
-/* MEDIA QUARIES */
-/* ==============*/
-
-@media (min-width: 768px) {
-
-    .mainServicios {
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 20px;
-    }
-
-    .tarjetasServicios {
-
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 30% 30% 30%;
-        grid-gap: 15px;
-        grid-template-areas: "familia comercial
- laboral corporativo
-            previsional salud"
-;
-    }
-
-    .tarjetasServicios:nth-child(1) {
-        grid-area: familia;
-    }
-
-    .tarjetasServicios:nth-child(2) {
-        grid-area: comercial;
-    }
-
-    .tarjetasServicios:nth-child(3) {
-        grid-area: laboral;
-    }
-
-    .tarjetasServicios:nth-child(4) {
-        grid-area: corporativo;
-    }
-
-    .tarjetasServicios:nth-child(5) {
-        grid-area: previsional;
-    }
-
-    .tarjetasServicios:nth-child(6) {
-        grid-area: salud;
-    }
-
-    .tarjetaDescripcionServ {
-        margin-top: 10px;
-        width: 100%;
-        height: 10vh;
-
-        h4 {
-            font-size: 30px;
-            font-weight: 100;
-        }
-
-        p {
-            font-size: 20px;
-        }
-    }
 }
 
 @media (min-width: 1025px) {
