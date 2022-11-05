@@ -24,61 +24,67 @@ p {
 /*================================================*/
 header {
   width: 100%;
-  display: flex;
-  flex-direction: column;
   border-bottom: solid #66ab8a 5px;
 }
 
-header .encabezado {
-  display: flex;
-  width: 100%;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-}
-
-header .encabezado .header__Logo {
+header .header__Logo {
   height: 80px;
 }
 
-header .menu {
-  display: flex;
+header nav {
   width: 100%;
-  background-color: #444341;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-header .menu li {
-  width: 100%;
-  text-align: center;
-  list-style-type: none;
-  transition: all 0.5;
+header .bar-btn {
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
-header .menu li:hover {
-  background: white;
-  color: #444341;
-  border: none;
+header .menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 85px;
+  background: #444341;
+  text-align: center;
+  transition: all .5s;
+}
+
+header .menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  transition: all .5s;
 }
 
 header .menu li a {
-  text-decoration: none;
-  font-size: 16px;
   color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-header .menu li a:hover {
-  background: white;
-  color: #444341;
+header .menu li .navActive,
+header .menu li .refActive,
+header .menu li li a:hover {
+  color: #66ab8a;
+  transition: .3s;
 }
 
-header .menu .navActive {
-  background: white;
+header #check {
+  display: none;
 }
 
-header .menu .refActive {
-  color: #444341;
+header #check:checked ~ .menu {
+  height: 100vh;
+}
+
+header #check:checked ~ .menu li {
+  display: block;
 }
 
 /*                     Main Index                   */
@@ -114,6 +120,8 @@ footer {
   color: white;
   padding: 10px;
   border-top: solid #66ab8a 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 footer .redesSociales ul {
@@ -143,15 +151,105 @@ footer .redesSociales ul li a:hover {
   color: #444341;
 }
 
-footer .derechos {
+footer .derechos p {
   font-size: 10px;
 }
 
 /* MEDIA QUARIES */
 /* ==============*/
 @media (min-width: 768px) {
-  .menu li a {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .bar-btn {
+    display: none;
+  }
+  nav .menu {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    background-color: #444341;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    transition: none;
+    top: 0;
+  }
+  nav .menu li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    transition: none;
+    transition: all 0.5;
+  }
+  nav .menu li:hover {
+    background: white;
+    color: #444341;
+    border: none;
+  }
+  nav .menu li a {
+    text-decoration: none;
+    text-transform: none;
+    font-weight: 400;
     font-size: 20px;
+    color: white;
+  }
+  nav .menu li a:hover {
+    background: white;
+    color: #444341;
+  }
+  nav .menu .navActive {
+    background: white;
+  }
+  nav .menu .refActive {
+    color: #444341;
+  }
+  /* ======================================================*/
+  /*                     Animación Index                   */
+  /*=======================================================*/
+  .tracking-in-contract-bck {
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
+  }
+  /**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck
+ * ----------------------------------------
+ */
+  @-webkit-keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+      transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+      transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      opacity: 1;
+    }
   }
   /*MAIN INDEX*/
   .fraseIndex p {
@@ -167,44 +265,46 @@ footer .derechos {
     margin-right: 50px;
   }
   footer .derechos {
-    font-size: 16px;
     margin-left: 50px;
+  }
+  footer .derechos p {
+    font-size: 16px;
   }
 }
 
 @media (min-width: 1025px) {
-  header {
+  nav {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-  header .encabezado {
+  nav .encabezado {
     width: auto;
     margin-left: 50px;
   }
-  header nav {
+  nav .menu {
+    display: flex;
+    justify-content: right;
     margin-right: 50px;
-  }
-  header nav .menu {
     gap: 5px;
     background-color: white;
     color: #444341;
-    justify-content: space-between;
   }
-  header nav .menu li {
+  nav .menu li {
     width: auto;
     margin-left: 8px;
   }
-  header nav .menu li a {
+  nav .menu li a {
     color: #444341;
     font-size: 20px;
     transition: all 0.8s;
   }
-  header nav .menu li a:hover {
+  nav .menu li a:hover {
     color: #66ab8a;
     font-size: 23px;
   }
-  header nav .menu .refActive {
+  nav .menu .refActive {
     color: #66ab8a;
     font-size: 23px;
   }
@@ -225,53 +325,6 @@ footer .derechos {
   footer .redesSociales li a i:hover {
     color: #66ab8a;
     font-size: 25px;
-  }
-}
-
-/* ======================================================*/
-/*                     Animación Index                   */
-/*=======================================================*/
-.tracking-in-contract-bck {
-  -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
-  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1s both;
-}
-
-/**
- * ----------------------------------------
- * animation tracking-in-contract-bck
- * ----------------------------------------
- */
-@-webkit-keyframes tracking-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(400px);
-    transform: translateZ(400px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
-
-@keyframes tracking-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(400px);
-    transform: translateZ(400px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
   }
 }
 
