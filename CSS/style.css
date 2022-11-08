@@ -425,6 +425,9 @@ footer .derechos p {
     height: 80vh;
     background-color: #e4e4e4;
   }
+  .mainEstudio .dra img {
+    width: 160px;
+  }
 }
 
 /* ====================================================*/
